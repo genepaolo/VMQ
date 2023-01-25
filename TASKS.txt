@@ -1,0 +1,6 @@
+Gene:
+Lobby
+Server
+
+Kyle:
+Host -> Lobby
