@@ -4,6 +4,7 @@ Dependencies:
 express
 sass
 socket.io
+react
 
 ## Available Scripts
 
