@@ -5,6 +5,7 @@ express
 sass
 socket.io
 node.js
+react
 
 ## Available Scripts
 
