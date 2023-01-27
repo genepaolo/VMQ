@@ -34,6 +34,19 @@ const corsOptions = {
   };
 app.use(cors(corsOptions));
 
+// MongoDB
+/**
+ * Call -> holo Query (input number)
+ * Array[videoIndex]
+ * Video (official videos, covers)
+ * - Mentions, video title/song (verify with songcount param)
+ */
+
+
+
+
+
+
 
 // Server listens for users that connect here
 server.listen(port, () => {
@@ -69,9 +82,10 @@ io.on('connection', (socket) => {
      * hostId: hostId (integer)
      * isSolo: if solo/multiplayer (boolean)
      */
-    socket.on("HOST_JOINED", ({hostName, hostId, isSolo}) => {
+    socket.on("HOST_JOINED", (lobby) => {
         
-        
+        console.log(lobby);
+        const {hostName, hostId, isSolo} = lobby;
         let sessionId = Math.floor(Math.random()*90000000) + 10000000;
         //console.log(sessionId, hostName, hostId, isSolo); // temp
         // Now we can emit back to host
